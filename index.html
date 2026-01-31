@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Telegram-боты на заказ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Inter, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:
+        linear-gradient(rgba(6,10,30,.78), rgba(6,10,30,.9)),
+        url("bg.jpg") center/cover no-repeat;
+    color:#fff;
+}
+
+.wrapper{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:40px;
+}
+
+.card{
+    max-width:680px;
+    background:rgba(255,255,255,.07);
+    backdrop-filter:blur(16px);
+    border-radius:24px;
+    padding:48px;
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 40px 100px rgba(0,0,0,.7);
+}
+
+h1{
+    font-size:46px;
+    font-weight:700;
+    line-height:1.15;
+}
+
+.subtitle{
+    margin-top:18px;
+    font-size:18px;
+    opacity:.85;
+}
+
+.btn{
+    margin-top:36px;
+    display:inline-block;
+    padding:16px 38px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#4da3ff,#1b5cff);
+    color:#fff;
+    font-weight:600;
+    text-decoration:none;
+    box-shadow:0 0 35px rgba(77,163,255,.7);
+    transition:.35s;
+    cursor:pointer;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 55px rgba(77,163,255,1);
+}
+
+.details{
+    margin-top:35px;
+    display:none;
+    animation:fade .5s ease forwards;
+}
+
+.details p{
+    margin-bottom:14px;
+    line-height:1.7;
+    opacity:.95;
+}
+
+.list{
+    margin:16px 0;
+}
+
+.list div{
+    margin-bottom:10px;
+}
+
+.contact{
+    margin-top:20px;
+    font-size:17px;
+    font-weight:600;
+}
+
+.contact span{
+    color:#4da3ff;
+}
+
+@keyframes fade{
+    from{opacity:0; transform:translateY(10px)}
+    to{opacity:1; transform:none}
+}
+
+/* 📱 MOBILE */
+@media(max-width:768px){
+    .wrapper{padding:20px}
+    .card{padding:28px}
+    h1{font-size:32px}
+    .subtitle{font-size:16px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+    <div class="card">
+        <h1>Создаю<br>Telegram-ботов<br>на заказ</h1>
+
+        <div class="subtitle">
+            Боты любой сложности — от простых до крупных проектов
+        </div>
+
+        <div class="btn" onclick="toggleDetails()">Подробнее</div>
+
+        <div class="details" id="details">
+            <p>
+                Боты любой сложности — от простых автоответчиков  
+                до полноценных Telegram-ботов с заявками, оплатой,
+                админ-панелью и базой данных.
+            </p>
+
+            <p><b>Для заказа нужно только:</b></p>
+
+            <div class="list">
+                <div>— описать, что должен делать бот</div>
+                <div>— как он должен работать (кнопки, шаги, логика)</div>
+                <div>— пожелания по дизайну и текстам (если есть)</div>
+            </div>
+
+            <p>
+                Цена зависит от сложности проекта.  
+                Простые боты — дешевле,  
+                сложные решения — обсуждаем индивидуально.
+            </p>
+
+            <p>
+                Сроки и детали обговариваем сразу.  
+                Поддержка и доработки возможны.
+            </p>
+
+            <div class="contact">
+                Заказать: <span>@razenos</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleDetails(){
+    const d = document.getElementById("details");
+    d.style.display = d.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
